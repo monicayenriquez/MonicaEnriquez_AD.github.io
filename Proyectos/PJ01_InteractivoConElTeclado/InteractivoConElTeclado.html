@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Interactivo con el Teclado</title>
+    <style>
+      header{
+        color:rgb(153, 0, 0);
+        text-align: center;
+        font-family: "Asap", sans-serif;
+        font-style: Light 500 Italic;
+        font-size: 200x;
+        padding-top: 1%;
+      }
+      h1 {
+        background-color:rgb(153, 0, 0);
+        color:rgb(255, 255, 255);
+        text-align: center;
+        font-family: "Asap", sans-serif;
+        font-style: Medium 500;
+        font-size: 200x;
+        padding-bottom: 1%;
+        padding-top: 1%;
+      }
+      body {
+        background-color: rgb(0, 0, 0);
+        text-align: center;
+      }
+      canvas {
+        background-color: rgb(101, 101, 101);
+        align-items: center;
+        margin-bottom: 40px;
+        margin-left: 10%;
+      }
+      aside {
+        color: white;
+      }
+      button {
+        margin-top: 20px;
+        flex-direction: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>MonicaEnriquez_AD | 34574 | IDGD V</header>
+    <h1>Fatson Todd te observa...</h1>
+    <aside>Press arrow keys. Or keys A, S, D or Space</aside>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <button onclick="window.location.href='monicayenriquez.github.io/MonicaEnriquez_AD.github.io/'">Regresar a INDEX</a>
+
+    <script src="keycodes.js"></script>
+    <script>
+
+    window.onload=function(){
+      var canvas = document.getElementById("canvas");
+      var context = canvas.getContext("2d");
+
+      var x= 325;
+      var y= 237.25;
+
+      context.font = "bold 15px Asap";
+      context.fillStyle='rgba(0,0,0,1)';
+      context.fillText("Fatson Todd te observa fijamente...", x-23, y-40);
+      
+      var imagen1 = new Image();
+      var imagen2 = new Image();
+      var imagen3 = new Image();
+      var imagen4 = new Image();
+      var imagen5 = new Image();
+      imagen1.src = "FT_Cabeza.png";
+      imagen2.src = "FT_Booooo.png";
+      imagen3.src = "FT_LET'S GOOOOO.png";
+      imagen4.src = "FT_OK....png";
+      imagen5.src = "FT_YIKESSS.png";
+      imagen1.onload = function() {
+        context.drawImage(imagen1, x, y, 150, 125.5);
+      };
+    
+      context.fillRect(x+40, y+150, 75, 75);
+
+      function onKeyboardEvent (event) {
+        switch (event.keyCode) {
+        case keycode.UP:
+          console.log("up!");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          y -= 5;
+      context.fillRect(x+40, y+150, 75, 75);
+          break;
+        case keycode.DOWN:
+          console.log("down!");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          y += 5;
+      context.fillRect(x+40, y+150, 75, 75);
+          break;
+        case keycode.LEFT:
+          console.log("left!");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          x -= 5;
+      context.fillRect(x+40, y+150, 75, 75);
+          break;
+        case keycode.RIGHT:
+          console.log("right!");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          x += 5;
+      context.fillRect(x+40, y+150, 75, 75);
+          break;
+        case keycode.SPACE:
+          console.log("Jump!");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          context.fillText("Approved >;D !!!", x+55, y-50);
+          context.drawImage(imagen3, x, y, 230.3, 240);
+          break;
+        case keycode.A:
+          console.log("Letra A");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          context.fillText("Dissapproved !!!", x+75, y-50);
+          context.drawImage(imagen2, x, y, 212.7, 228.7);
+          break;
+        case keycode.S:
+          console.log("Letra S");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          context.fillText("You are kindaaa weird, right?", x+5, y-50);
+          context.drawImage(imagen4, x, y, 189, 213.3);
+          break;
+        case keycode.D:
+          console.log("Letra D");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          context.fillText("Ouch! Do you wanna hurt me?", x+10, y-50);
+          context.drawImage(imagen5, x, y, 217.7, 208.7);
+          break;
+        default:
+          console.log(event.keyCode);
+        }
+      }
+
+      window.addEventListener('keydown', onKeyboardEvent, false);
+
+    };
+    </script>
+  </body>
+</html>
