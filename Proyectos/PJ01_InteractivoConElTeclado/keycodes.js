@@ -10,5 +10,7 @@ var keycode = {
  //LETRAS
     A: 65, 
     S: 83, 
-    D: 68
+    D: 68,
+    J: 74,
+    F: 70,
 };
