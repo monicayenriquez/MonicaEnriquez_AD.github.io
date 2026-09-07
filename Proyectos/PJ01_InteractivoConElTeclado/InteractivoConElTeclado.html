@@ -127,6 +127,18 @@
           context.clearRect(0, 0, innerWidth, innerHeight);
           context.fillText("Ouch! Do you wanna hurt me?", x+10, y-50);
           context.drawImage(imagen5, x, y, 217.7, 208.7);
+                case keycode.J:
+          console.log("Letra J");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          context.fillText("Jokes on you!", x+80, y-50);
+          context.drawImage(imagen2, x, y, 212.7, 228.7);
+          break;
+        case keycode.F:
+          console.log("Letra F");
+          context.clearRect(0, 0, innerWidth, innerHeight);
+          context.fillText("Nice to see you again, or is it?", x-15, y-50);
+          context.drawImage(imagen1, x, y, 150, 125.5);
+          break;
           break;
         default:
           console.log(event.keyCode);
