@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Reto Onda Sinoidal y Coseno</title>
+    <link rel="stylesheet" href="styleStar.css">
+  </head>  
+  <body>
+    <header>MonicaEnriquez_AD | 34574 | IDGD V</header>
+    <h1>Little Star in the Space Canvas</h1>
+    <canvas id="canvas" width="900" height="525"></canvas>
+    <button onclick="window.location.href='file:///C:/Users/lmoni/IDGD%20V/Animación%20Dinámica/GitHub_MonicaEnriquez_AD.github.io/index.html'">Regresar a INDEX</a>
+    
+    <script src="utilsStar.js"></script>
+    <script src="Star.js"></script>
+    <script>
+    window.onload = function () {
+    var canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d'),
+        star = new Estrellita();
+    star.centerX = canvas.width / 2;
+    star.centerY = 325;
+    star.rangeX = 350;   
+    star.rangeY = 50;   
+    star.speedX = 0.01;
+    star.speedY = 0.06;
+
+    var limiteY = canvas.height - 50;
+
+    var coordenadas = [
+      { x: 84,  y: 87  },
+      { x: 563, y: 87  },
+      { x: 857, y: 41  },
+      { x: 276, y: 156 },
+      { x: 449, y: 197 },
+      { x: 797, y: 197 },
+      { x: 143, y: 302 },
+      { x: 697, y: 342 }
+    ];
+    var coordenadasB = [
+      { x: 205, y: 79  },
+      { x: 405, y: 68  },
+      { x: 744, y: 74  },
+      { x: 83,  y: 213 },
+      { x: 647, y: 203 },
+      { x: 257, y: 280 },
+      { x: 83,  y: 380 },
+      { x: 843, y: 344 }
+    ];
+
+    var estrellasA = crearEstrellasEnCoordenadas(coordenadas, {
+      rangeScale: 0.4,
+      speedScale: 0.04,
+      centerScale: 1,
+      desfase: 0.5
+    });
+    var estrellasB = crearEstrellasBEnCoordenadas(coordenadasB, {
+      rangeScale: 0.4,
+      speedScale: 0.04,
+      centerScale: 1,
+      desfase: 0.5
+    });
+
+    function dibujarTexto(context) {
+      context.save();
+
+      context.font = "15px Asap, sans-serif";   // tamaño y fuente
+      context.fillStyle = "#F8F254";            // color (mismo amarillo de tu tema)
+      context.textAlign = "center";             // alineación horizontal: left | center | right
+      context.textBaseline = "bottom";             // alineación vertical: top | middle | bottom
+
+      context.fillText("Haz click al canvas para activar audios", canvas.width / 2, 500);
+
+      context.restore();
+    }
+        
+    (function drawFrame () {
+    window.requestAnimationFrame(drawFrame, canvas);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+      dibujarEstrellas(context, estrellasA);
+      dibujarEstrellasB(context, estrellasB);
+      star.moveX();
+      star.moveY(limiteY)
+      star.draw(context);
+
+      revisarColisionConAudio(star, estrellasA);
+      revisarColisionConAudioB(star, estrellasB);
+
+      dibujarTexto(context);
+
+    }());
+  };
+    </script>
+  </body>
+</html>
