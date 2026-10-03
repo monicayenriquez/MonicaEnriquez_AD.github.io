@@ -1,0 +1,314 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DibujoEnCanvas</title>
+    <link rel="stylesheet" href="styleDFC.css">
+  </head>
+  <body>
+    <header>MonicaEnriquez_AD | 34574 | IDGD V</header>
+    <h1>Landscape of the Sunset Near My Mushroom House</h1>
+    <canvas id="canvas" width="900" height="525"></canvas>
+    <button onclick="window.location.href='file:///C:/Users/lmoni/IDGD%20V/Animación%20Dinámica/GitHub_MonicaEnriquez_AD.github.io/index.html'">Regresar a INDEX</a>
+
+    <script src="utilsDFC.js"></script>
+    <script>
+    window.onload = function () {
+      //Our code here...
+      var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d');
+      //BaseCANVAS_FONDO
+          context.save();
+          //context.fillStyle= "rgba(147, 178, 252, 1)";
+          //context.fillRect(0, 0, 900, 525);
+          c1 = {x: 450, y: 1500, radius: 250},  //gradient start circle
+          c2 = {x: 450, y: 1500, radius: 1700},
+          c3 = {x: 450, y: 2500, radius: 1600}, //gradient end circle
+          gradient = context.createRadialGradient(c1.x, c1.y, c1.radius,
+                                                    c2.x, c2.y, c2.radius,
+                                                    c3.x, c3.y, c3.radius);
+          //all black alpha blend
+          gradient.addColorStop(0, "rgba(15, 62, 30, 1)"); //alpha required
+          gradient.addColorStop(0.62, "rgba(54, 179, 56, 1)");
+          gradient.addColorStop(0.63, "rgba(230, 150, 150, 1)");
+          gradient.addColorStop(0.66, "rgba(190, 164, 200, 1)");
+          gradient.addColorStop(0.70, "rgba(147, 178, 252, 1)");
+          gradient.addColorStop(1, "rgba(147, 178, 252, 1)");
+
+          context.fillStyle = gradient;
+          context.stroke();
+          context.fillRect(0, 0, 900, 525);
+          context.restore();
+
+      //ESTRELLAS
+            
+
+            points = [],
+            numPoints = 9,
+            ctrlPoint = {};
+
+      var points = [];
+      for (var i = 0; i < numPoints; i++) {
+          points.push({
+              x: Math.random() * canvas.width,
+              y: Math.random() * 250
+          });
+      }
+
+      function dibujarEstrella(context, x, y) {
+          context.save();
+          context.strokeStyle = "rgba(225, 251, 255, 1)";
+          context.fillStyle = "rgba(225, 251, 255, 1)";
+          context.lineWidth = 1;
+          context.lineCap = "round";
+          context.lineJoin = "round";
+
+          context.beginPath();
+          context.moveTo(x, y);                                                    // punta superior
+          context.bezierCurveTo(x + 2.5, y + 10, x + 2.5, y + 10, x + 7.5, y + 11.25);   // punta derecha
+          context.bezierCurveTo(x + 2.5, y + 12.5, x + 2.5, y + 12.5, x, y + 22.5);      // punta inferior
+          context.bezierCurveTo(x - 2.5, y + 12.5, x - 2.5, y + 12.5, x - 7.5, y + 11.25); // punta izquierda
+          context.bezierCurveTo(x - 2.5, y + 10, x - 2.5, y + 10, x, y);                 // vuelta a la superior
+          context.closePath();
+          context.fill();
+          context.stroke();
+          context.restore();
+      }
+
+      for (var i = 0; i < points.length; i++) {
+          dibujarEstrella(context, points[i].x, points[i].y);
+      }
+            
+
+      //BaseCasa
+          context.save();
+          pt1 = {x: 368, y: 215},           //gradient start point
+          pt2 = {x: 532, y: 378},           //gradient end point
+          gradient = context.createLinearGradient(pt1.x, pt1.y, pt2.x, pt2.y);
+          gradient.addColorStop(0, "rgba(255, 233, 153, 1)"); //alpha required
+          gradient.addColorStop(1, "rgba(158, 124, 1, 1)");
+          //context.fillStyle= "rgba(147, 178, 252, 1)";
+          context.fillStyle = gradient;
+          context.stroke();
+          context.fillRect(368, 215, 164, 163);
+          context.restore();
+
+
+      //VENTANAS_CASA
+        function dibujarRectanguloConGradienteVENTANAS(context, x, y, ancho, alto, colorInicio, colorFin) {
+            context.save();
+            context.strokeStyle = "rgba(177, 80, 80, 1)";
+            context.lineWidth = 4;
+            context.lineJoin = "round";
+            context.lineCap = "round";
+
+            context.beginPath();
+            context.moveTo(x,y);
+            context.lineTo(x+ancho,y);
+            context.lineTo(x+ancho,y+alto);
+            context.lineTo(x,y+alto);
+            context.lineTo(x,y);
+
+            // El gradiente se calcula relativo al rectángulo
+            const gradiente = context.createLinearGradient(x - 20, y - 20, x + ancho, y + alto);
+            gradiente.addColorStop(0, colorInicio);
+            gradiente.addColorStop(1, colorFin);
+
+            context.fillStyle = gradiente;
+            context.fillRect(x, y, ancho, alto);
+            context.stroke();
+
+            context.restore();
+        }
+        dibujarRectanguloConGradienteVENTANAS(context, 389, 236, 34, 34,
+            "rgba(147, 178, 252, 1)", "rgba(227, 202, 110, 1)");
+        dibujarRectanguloConGradienteVENTANAS(context, 478, 236, 34, 34,
+            "rgba(147, 178, 252, 1)", "rgba(227, 202, 110, 1)");
+
+      //PILARES_CASA
+        function dibujarRectanguloConGradientePILAR(context, x, y, ancho, alto, colorInicio, colorFin) {
+            context.save();
+
+            // El gradiente se calcula relativo al rectángulo
+            const gradiente = context.createLinearGradient(x - 20, y - 20, x + ancho, y + alto);
+            gradiente.addColorStop(0, colorInicio);
+            gradiente.addColorStop(1, colorFin);
+
+            context.fillStyle = gradiente;
+            context.fillRect(x, y, ancho, alto);
+
+            context.restore();
+        }
+        dibujarRectanguloConGradientePILAR(context, 405.5, 310, 25, 68,
+            "rgba(255, 233, 153, 1)", "rgba(158, 124, 1, 1)");
+        dibujarRectanguloConGradientePILAR(context, 468.5, 310, 25, 68,
+            "rgba(255, 233, 153, 1)", "rgba(158, 124, 1, 1)");
+        dibujarRectanguloConGradientePILAR(context, 136, 310, 25, 85,
+            "rgba(255, 233, 153, 1)", "rgba(158, 124, 1, 1)");
+
+        //TECHOS
+        //Grande_TECHO
+            context.save();
+            pt1 = {x: 345, y: 187.5},           //gradient start point
+            pt2 = {x: 555, y: 187.5},           //gradient end point
+            gradient = context.createLinearGradient(pt1.x, pt1.y, pt2.x, pt2.y);
+            gradient.addColorStop(0, "rgba(213, 116, 116, 1)"); //alpha required
+            gradient.addColorStop(1, "rgba(96, 0, 0, 1)");
+            context.fillStyle = gradient;
+            context.strokeStyle = gradient;
+            context.beginPath();
+            context.moveTo(450,215);
+            context.lineTo(345,215);
+            context.lineTo(450,160);
+            context.lineTo(555,215);
+            context.lineTo(450,215);
+            context.lineWidth = 15;
+            context.lineJoin = "round";
+            context.fill();
+            context.stroke();
+            //context.fillRect(96, 0, 0, 1);
+            context.restore();
+
+        //Chico_TECHO
+            context.save();
+            pt1 = {x: 345, y: 187.5},           //gradient start point
+            pt2 = {x: 555, y: 187.5},           //gradient end point
+            gradient = context.createLinearGradient(pt1.x, pt1.y, pt2.x, pt2.y);
+            gradient.addColorStop(0, "rgba(213, 116, 116, 1)"); //alpha required
+            gradient.addColorStop(1, "rgba(96, 0, 0, 1)");
+            context.fillStyle = gradient;
+            context.strokeStyle = gradient;
+            context.beginPath();
+            context.moveTo(450,310);
+            context.lineTo(405,310);
+            context.lineTo(450,290);
+            context.lineTo(495,310);
+            context.lineTo(450,310);
+            context.lineWidth = 15;
+            context.lineJoin = "round";
+            context.fill();
+            context.stroke();
+            //context.fillRect(96, 0, 0, 1);
+            context.restore();
+
+        //BasePuerta_CASA
+            context.strokeStyle = "rgba(177, 80, 80, 1)";
+            context.lineWidth = 8;
+            context.lineJoin = "round";
+            context.lineCap = "round";
+            context.save();
+            context.beginPath();
+            context.moveTo(435,540);
+            context.lineTo(435,532);
+            context.lineTo(465,532);
+            context.lineTo(465,593);
+            context.lineTo(435,593);
+            context.stroke();
+            context.fillStyle = "rgba(158, 124, 1, 1)";
+            context.fillRect(430, 318, 38, 60);
+            context.restore();
+
+        //Puerta_CASA
+            context.strokeStyle = "rgba(177, 80, 80, 1)";
+            context.lineWidth = 4;
+            context.lineJoin = "round";
+            context.lineCap = "round";
+            context.save();
+            context.beginPath();
+            context.moveTo(435,540);
+            context.lineTo(435,532);
+            context.lineTo(465,532);
+            context.lineTo(465,593);
+            context.lineTo(435,593);
+            context.stroke();
+            context.fillStyle = "rgba(122, 96, 0, 1)";
+            context.fillRect(434, 324, 30, 54);
+            context.restore();
+
+        //PerillaPuerta_CASA
+            context.save();
+
+            context.fillStyle = "rgba(158, 124, 1, 1)";
+            context.beginPath();
+            context.arc(460, 354, 2, 0, Math.PI * 2, true);
+            context.fill();
+            
+            context.restore();        
+
+        
+
+
+        //LUNA & SPOTS
+        function dibujarCirculoConGradienteLUNA(context, x, y, radio) {
+            context.save();
+            
+            // Círculo de inicio del gradiente (más pequeño o desplazado)
+            let c1 = { x: x - radio, y: y + radio, radius: 0 };
+            // Círculo final del gradiente
+            let c2 = { x: x, y: y, radius: radio * 2 };
+            
+            let gradient = context.createRadialGradient(c1.x, c1.y, c1.radius, c2.x, c2.y, c2.radius);
+            
+            gradient.addColorStop(1, 'rgba(225, 251, 255, 1)');
+            gradient.addColorStop(0, 'rgba(200, 249, 255, 0)');
+            
+            context.fillStyle = gradient;
+            context.beginPath();
+            context.arc(x, y, radio, 0, Math.PI * 2, true);
+            context.fill();
+            
+            context.restore();
+        }
+
+
+        //Base_LUNA
+          dibujarCirculoConGradienteLUNA(context, 760, 80, 65);
+        //Spot01_LUNA
+          dibujarCirculoConGradienteLUNA(context, 792, 50, 13);
+        //Spot02_LUNA
+          dibujarCirculoConGradienteLUNA(context, 755, 42, 22);
+        //Spot03_LUNA
+          dibujarCirculoConGradienteLUNA(context, 795, 90, 22);
+
+          
+        //Spot02_LUNA
+        //HONGUITOOO
+            context.save();
+            c1 = {x: 130, y: 330, radius: 1},  //gradient start circle
+            c2 = {x: 130, y: 350, radius: 50},
+            c3 = {x: 180, y: 360, radius: 120}, //gradient end circle
+            gradient = context.createRadialGradient(c1.x, c1.y, c1.radius,
+                                                      c2.x, c2.y, c2.radius,
+                                                      c3.x, c3.y, c3.radius);
+            //all black alpha blend
+            gradient.addColorStop(0, "rgba(245, 198, 204, 1)"); //alpha required
+            gradient.addColorStop(0.3, "rgba(246, 186, 194, 1)");
+            gradient.addColorStop(0.72, "rgba(249, 146, 160, 1)");
+            gradient.addColorStop(1, "rgba(170, 72, 85, 1)");
+            context.fillStyle = gradient;
+            context.strokeStyle = gradient;
+
+            context.beginPath();
+            context.moveTo(150,310);
+            context.lineTo(105,310);
+            context.lineTo(150,290);
+            context.lineTo(195,310);
+            context.lineTo(150,310);
+            context.lineWidth = 15;
+            context.lineJoin = "round";
+            context.fill();
+            context.stroke();
+            //context.fillRect(96, 0, 0, 1);
+            context.restore();
+
+          //Spot01_HONGUITO
+          dibujarCirculoConGradienteLUNA(context, 180, 310, 5);
+          //Spot02_HONGUITO
+          dibujarCirculoConGradienteLUNA(context, 155, 295, 8);
+
+        
+
+    };
+    </script>
+  </body>
+</html>
