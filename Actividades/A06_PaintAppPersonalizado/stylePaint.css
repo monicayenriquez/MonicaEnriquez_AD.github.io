@@ -78,7 +78,7 @@ canvas {
   position: fixed;
   top: 0;
   bottom: 0;                 /* ocupa toda la altura de la ventana */
-  width: var(--ancho-columna);
+  width: 150px;
   background-color: rgba(255, 0, 0, 0.4);
   background-repeat: repeat-y;
   background-position: center top;
