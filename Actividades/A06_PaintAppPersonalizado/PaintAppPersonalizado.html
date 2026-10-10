@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Paint App Personalizado</title>
+    <link rel="stylesheet" href="stylePaint.css">
+  </head>
+  <body>
+    <div class="columna" id="columnaIzq"></div>
+    <div class="columna" id="columnaDer"></div>
+    <header>MonicaEnriquez_AD | 34574 | IDGD V</header>
+    <h1>My Paint Canvas with Pastel Pallete</h1>
+    <aside class="Instrucciones">Click and draw with the mouse.</aside>
+    <div class="area">
+      <canvas id="canvas" width="900" height="525"></canvas>
+      <aside class="paleta">
+        <button id="black"  type="button" value="#a9a9a9"></button>
+        <button id="red"    type="button" value="#f08080"></button>
+        <button id="pink"   type="button" value="#ffc0cb"></button>
+        <button id="blue"   type="button" value="#87ceeb"></button>
+        <button id="yellow" type="button" value="#eee8aa"></button>
+        <button id="green"  type="button" value="#90ee90"></button>
+        <button id="fineLine" type="button" data-width="1"></button>
+        <button id="basicLine" type="button" data-width="5"></button>
+        <button id="thickLine" type="button"data-width="1"></button>
+        <button id="clear"  type="button">✕</button>
+        <button id="BackToIndex" onclick="window.location.href='file:///C:/Users/lmoni/IDGD%20V/Animación%20Dinámica/GitHub_MonicaEnriquez_AD.github.io/index.html'">INDEX</button>
+        </aside>
+      </div>
+    <script src="utilsPAP.js"></script>
+    <script>
+    window.onload = function () {
+      var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d'),
+          mouse = utils.captureMouse(canvas);
+
+      canvas.addEventListener('mousedown', function () {
+        context.beginPath();
+        context.moveTo(mouse.x, mouse.y);
+        canvas.addEventListener('mousemove', onMouseMove, false);
+      }, false);
+
+      canvas.addEventListener('mouseup', function () {
+        canvas.removeEventListener('mousemove', onMouseMove, false);
+      }, false);
+
+      function onMouseMove () {
+        context.lineTo(mouse.x, mouse.y);
+        context.stroke();
+      }
+
+      // Cambiar color de trazo
+      var botonesColor = document.querySelectorAll('button[value]');
+
+      botonesColor.forEach(function (boton) {
+        boton.addEventListener('click', function () {
+          context.strokeStyle = boton.value;
+        });
+      });
+
+      // Borrar todo
+        var clearButton = document.getElementById('clear');
+        clearButton.addEventListener('click', function() {
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            });
+            
+      // Cambiar grosor de trazo
+      document.querySelectorAll('button[data-width]').forEach(function (boton) {
+        boton.addEventListener('click', function () {
+          context.lineWidth = Number(boton.dataset.width);
+        });
+      });
+          };
+    </script>
+  </body>
+</html>
