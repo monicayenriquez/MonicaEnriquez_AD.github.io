@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rotar con Mouse</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>MonicaEnriquez_AD | 34574 | IDGD V</header>
+    <h1>Nutria in the Wave</h1>
+    <canvas id="canvas" width="600" height="400"></canvas>
+    <aside>Move mouse on canvas element.</aside>
+    <button onclick="window.location.href='file:///C:/Users/lmoni/IDGD%20V/Animación%20Dinámica/GitHub_MonicaEnriquez_AD.github.io/index.html'">Regresar a INDEX</a>
+
+    
+    <script src="utils.js"></script>
+    <!-- <script src="./classes/arrow.js"></script> -->
+    <script>
+    window.onload = function () {
+      var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d'),
+          mouse = utils.captureMouse(canvas),
+          nutria = new Image();
+          nutria.src = "NUTRIA.png";
+        
+      (function drawFrame () {
+        window.requestAnimationFrame(drawFrame, canvas);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.save();
+        var x = 397;
+        var y = 250;
+
+        context.translate(x, y); //coordenadas donde quieres que aparezca tu imagen
+        var dx = mouse.x - x,
+            dy = mouse.y - y;
+
+        var radianes = Math.atan2(dy, dx); //radians
+        console.log(radianes);
+        context.rotate(radianes); //radians
+        context.drawImage(nutria, -nutria.width/2, -nutria.height/2);
+        context.restore();
+
+      }());
+      
+    };
+    </script>
+  </body>
+</html>

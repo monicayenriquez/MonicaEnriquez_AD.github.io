@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Animación Onda Sinoidal y Coseno</title>
+    <link rel="stylesheet" href="styleBaseStar.css">
+  </head>  
+  <body>
+    <header>MonicaEnriquez_AD | 34574 | IDGD V</header>
+    <h1>Little Star in a Blank Canvas</h1>
+    <canvas id="canvas" width="900" height="525"></canvas>
+    <button onclick="window.location.href='file:///C:/Users/lmoni/IDGD%20V/Animación%20Dinámica/GitHub_MonicaEnriquez_AD.github.io/index.html'">Regresar a INDEX</a>
+    
+    <script src="utilsStar.js"></script>
+    <script src="baseStar.js"></script>
+    <script>
+    window.onload = function () {
+      
+    var canvas = document.getElementById('canvas'),
+        context = canvas.getContext('2d'),
+        star = new Estrellita(),
+        angle = 0,
+        centerScale = 1,
+        range = .5,
+        speed = 0.05;
+    star.centerX = canvas.width / 2;
+    star.centerY = 300;
+    star.rangeX = 320;   
+    star.speedX = 0.005;
+    star.rangeRotation = 1;    
+    star.speedRotation = 0.005;
+    
+        
+    (function drawFrame () {
+    window.requestAnimationFrame(drawFrame, canvas);
+    context.clearRect(0, 0, canvas.width, canvas.height);
+
+      star.moveX();
+      star.rotateCosine(); 
+      star.draw(context);
+    }());
+
+    };
+    </script>
+  </body>
+</html>
