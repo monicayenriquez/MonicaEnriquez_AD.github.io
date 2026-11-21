@@ -1,0 +1,536 @@
+.da-unit-2 {
+  	width: 100%;
+  	height: 2740px;
+  	position: relative;
+  	background-color: #ffd45c;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	text-align: left;
+  	font-size: 10px;
+  	color: #49351b;
+  	font-family: Inter;
+}
+.navigation {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.golden-hour-navigation {
+  	width: 1440px;
+  	height: 104px;
+  	position: relative;
+}
+.navigation2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #ffd45c;
+  	border-bottom: 1px solid rgba(73, 53, 27, 0.38);
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 104px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 0px 64px;
+  	gap: 20px;
+}
+.portfolio-wordmark {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	gap: 20px;
+}
+.meux-logo-icon {
+  	height: 19.3px;
+  	width: 164.4px;
+  	position: relative;
+  	box-shadow: -2.054999828338623px 1.5412499904632568px 2.49px rgba(73, 53, 27, 0.5);
+}
+.graphic-digital {
+  	width: 160px;
+  	position: relative;
+  	letter-spacing: 0.1em;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.navigation-links {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	gap: 40px;
+  	font-size: 16px;
+}
+.work {
+	text-decoration: none;
+	color: #49351B;
+	border-radius: 32px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	width: 65px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.about {
+  	width: 76px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.about2 {
+  	width: 25px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.contact-link {
+  	border-radius: 50px;
+  	background: linear-gradient(89.93deg, #241808, #49351b);
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 15px 24px;
+  	color: #ffd45c;
+}
+.lets-talk {
+  	width: 91px;
+  	position: relative;
+  	white-space: pre-wrap;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.project-introduction {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 40px 64px 56px;
+  	gap: 40px;
+  	font-size: 14px;
+}
+.project-trail {
+  	width: 1312px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 20px;
+}
+.back-link {
+	text-decoration: none;
+	color: #49351b;
+  	width: 95px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.course-trail {
+  	width: 230px;
+  	position: relative;
+  	font-size: 12px;
+  	white-space: pre-wrap;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.unit-selector {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 15px;
+  	font-size: 12px;
+}
+.unit-2-selected {
+  	border-radius: 32px;
+  	background: linear-gradient(89.93deg, #241808, #49351b);
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 12px 20px;
+  	color: #ffd45c;
+}
+.unit-label {
+	text-decoration: none;
+	color: #49351B;
+	border-radius: 32px;
+  	background-color: #ffd45c;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	padding: 12px 20px;
+}
+.unit-label3 {
+  	text-decoration: none;
+	color: #49351B;
+	border-radius: 32px;
+  	background-color: #ffd45c;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	padding: 12px 15px;
+}
+.project-headline {
+  	width: 1312px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	gap: 72px;
+  	font-size: 13px;
+}
+.title-and-introduction {
+  	width: 960px;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 24px;
+}
+.course-unit {
+  	width: 100px;
+  	position: relative;
+  	display: inline-block;
+}
+.project-title {
+  	font-family: "Bricolage Grotesque";
+	font-size: 86px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 94px; /* 97.917% */
+	letter-spacing: -3.84px;
+	background: var(--dark-brown-gradiant, linear-gradient(90deg, #241808 2.22%, #49351B 99.94%));
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.project-summary {
+  	width: 720px;
+  	position: relative;
+  	font-size: 19px;
+  	line-height: 29px;
+  	display: inline-block;
+}
+.unit-index {
+  	width: 280px;
+  	position: relative;
+  	font-size: 176px;
+  	letter-spacing: -0.07em;
+  	line-height: 176px;
+  	display: inline-block;
+  	font-family: 'Bricolage Grotesque';
+  	color: #b9432b;
+  	text-align: right;
+  	flex-shrink: 0;
+}
+.project-showcase-parent {
+  	align-self: stretch;
+  	background-color: #b9432b;
+  	overflow: hidden;
+  	display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  	align-content: start;
+  	gap: 40px;
+  	padding-left: 67px;
+  	padding-right: 67px;
+  	padding-top: 67px;
+  	padding-bottom: 67px;
+  	font-size: 98.42px;
+  	font-family: 'Bricolage Grotesque';
+}
+.project-showcase {
+  	text-decoration: none;
+	color: #49351b;
+	background-color: #c1d96a;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 25px 25px 15px;
+  	gap: 10px;
+  	grid-column: 1;
+  	grid-row: 1;
+}
+.original-project-artwork {
+  	align-self: stretch;
+  	height: 349px;
+  	position: relative;
+  	background-color: #b9432b;
+  	overflow: hidden;
+  	flex-shrink: 0;
+}
+.imgAct {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #000000;
+  	overflow: hidden;
+}
+.sunshine-poster {
+  	position: absolute;
+  	top: 25.82px;
+  	left: 29.04px;
+  	background-color: #ffd45c;
+  	width: 209.8px;
+  	height: 296.9px;
+  	overflow: hidden;
+}
+.sol {
+  	position: absolute;
+  	top: 66.15px;
+  	left: 14.52px;
+  	letter-spacing: -0.07em;
+  	display: inline-block;
+  	color: #b9432b;
+  	width: 150.1px;
+}
+.a-little-more-bright {
+  	position: absolute;
+  	top: 201.69px;
+  	left: 19.36px;
+  	font-size: 16.94px;
+  	line-height: 18.56px;
+  	display: inline-block;
+  	width: 121.8px;
+}
+.feel-good-essentials {
+  	position: absolute;
+  	top: 267.84px;
+  	left: 19.36px;
+  	font-size: 7.26px;
+  	font-family: Inter;
+  	display: inline-block;
+  	width: 87.1px;
+}
+.pistachio-brand-card {
+  	position: absolute;
+  	top: 151.67px;
+  	left: 259.77px;
+  	background-color: #c1d96a;
+  	width: 225.9px;
+  	height: 171px;
+  	overflow: hidden;
+  	font-size: 29.85px;
+}
+.good-mood-by-design {
+  	position: absolute;
+  	top: 25.82px;
+  	left: 19.36px;
+  	line-height: 30.66px;
+  	display: inline-block;
+  	width: 184.7px;
+}
+.sol2 {
+  	position: absolute;
+  	top: 138.76px;
+  	left: 19.36px;
+  	font-size: 7.26px;
+  	font-family: Inter;
+  	white-space: pre-wrap;
+  	display: inline-block;
+  	width: 129.1px;
+}
+.sol-campaign-heading {
+  	position: absolute;
+  	top: 48.4px;
+  	left: 259.77px;
+  	font-size: 21.78px;
+  	line-height: 23.4px;
+  	color: #ffd45c;
+}
+.artwork-caption {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 20px;
+  	font-size: 16.05px;
+}
+.artwork-title {
+  	width: 285px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+	padding-right: 230px;
+}
+.credit {
+  	width: 260px;
+  	position: right;
+  	font-size: 12.04px;
+  	font-family: Inter;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.project-showcase2 {
+  	text-decoration: none;
+	color: #49351b;
+	background-color: #c1d96a;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 25px 25px 15px;
+  	gap: 10px;
+  	grid-column: 2;
+  	grid-row: 1;
+}
+.original-project-artwork2 {
+  	align-self: stretch;
+  	height: 348.5px;
+  	position: relative;
+  	background-color: #b9432b;
+  	overflow: hidden;
+  	flex-shrink: 0;
+}
+.project-showcase3 {
+  	text-decoration: none;
+	color: #49351b;
+	background-color: #c1d96a;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 25px 25px 15px;
+  	gap: 10px;
+  	grid-column: 1;
+  	grid-row: 2;
+}
+.project-showcase4 {
+  	text-decoration: none;
+	color: #49351b;
+	background-color: #c1d96a;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 25px 25px 15px;
+  	gap: 10px;
+  	grid-column: 2;
+  	grid-row: 2;
+}
+.project-showcase5 {
+  	text-decoration: none;
+	color: #49351b;
+	background-color: #c1d96a;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 25px 25px 15px;
+  	gap: 10px;
+  	grid-column: 1;
+  	grid-row: 3;
+}
+.project-showcase6 {
+  	text-decoration: none;
+	color: #49351b;
+	background-color: #c1d96a;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 25px 25px 15px;
+  	gap: 10px;
+  	grid-column: 2;
+  	grid-row: 3;
+}
+.project-showcase7 {
+  	text-decoration: none;
+	color: #49351b;
+	background-color: #c1d96a;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 25px 25px 15px;
+  	gap: 10px;
+  	grid-column: 1;
+  	grid-row: 4;
+}
+.footer {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	text-align: center;
+}
+.golden-hour-footer {
+  	width: 1440px;
+  	height: 72px;
+  	position: relative;
+}
+.footer2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #ffd45c;
+  	width: 1440px;
+  	height: 72px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 32px 64px;
+  	box-sizing: border-box;
+  	gap: 20px;
+}
+.meux_Logo {
+  	position: relative;
+	max-width: 100%;
+  	box-shadow: -2.054999828338623px 1.5412499904632568px 2.49px rgba(73, 53, 27, 0.5);
+  	flex-shrink: 0;
+}
+.made-with-intention {
+  	width: 430px;
+  	position: relative;
+  	letter-spacing: 0.06em;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.social-links {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 28px;
+  	flex-shrink: 0;
+  	text-align: left;
+  	font-size: 14px;
+}
+.instagram {
+  	width: 84px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.behance {
+  	width: 75px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.back-to-top {
+  	width: 93px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+
+body {
+margin: 0;
+line-height: normal;
+}
