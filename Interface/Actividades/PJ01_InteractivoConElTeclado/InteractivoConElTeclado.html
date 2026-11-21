@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="Reto Canvas" content="initial-scale=1, width=device-width">
+		
+		<link rel="stylesheet"  href="stylePJ01.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+		
+		<script src="keycodes.js"></script>
+		<script>
+			window.onload=function(){
+				var canvas = document.getElementById("canvas");
+				var context = canvas.getContext("2d");
+
+				var x= 325;
+				var y= 237.25;
+
+				context.font = "bold 15px Inter";
+				context.fillStyle='rgba(0,0,0,1)';
+				context.fillText("Fatson Todd te observa fijamente...", x-23, y-40);
+				
+				var imagen1 = new Image();
+				var imagen2 = new Image();
+				var imagen3 = new Image();
+				var imagen4 = new Image();
+				var imagen5 = new Image();
+				imagen1.src = "FT_Cabeza.png";
+				imagen2.src = "FT_Booooo.png";
+				imagen3.src = "FT_LET'S GOOOOO.png";
+				imagen4.src = "FT_OK....png";
+				imagen5.src = "FT_YIKESSS.png";
+				imagen1.onload = function() {
+					context.drawImage(imagen1, x, y, 150, 125.5);
+				};
+				
+				context.fillRect(x+40, y+150, 75, 75);
+
+				function onKeyboardEvent (event) {
+					switch (event.keyCode) {
+					case keycode.UP:
+					console.log("up!");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					y -= 5;
+				context.fillRect(x+40, y+150, 75, 75);
+					break;
+					case keycode.DOWN:
+					console.log("down!");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					y += 5;
+				context.fillRect(x+40, y+150, 75, 75);
+					break;
+					case keycode.LEFT:
+					console.log("left!");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					x -= 5;
+				context.fillRect(x+40, y+150, 75, 75);
+					break;
+					case keycode.RIGHT:
+					console.log("right!");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					x += 5;
+				context.fillRect(x+40, y+150, 75, 75);
+					break;
+					case keycode.SPACE:
+					console.log("Jump!");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					context.fillText("Dissapproved !!!", x+75, y-50);
+					context.drawImage(imagen2, x, y, 212.7, 228.7);
+					break;
+					case keycode.A:
+					console.log("Letra A");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					context.fillText("Approved >;D !!!", x+45, y-50);
+					context.drawImage(imagen3, x, y, 230.3, 240);
+					break;
+					case keycode.S:
+					console.log("Letra S");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					context.fillText("So, you are playing with me?", x+5, y-50);
+					context.drawImage(imagen4, x, y, 189, 213.3);
+					break;
+					case keycode.D:
+					console.log("Letra D");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					context.fillText("Do you wanna fight me?", x+10, y-50);
+					context.drawImage(imagen5, x, y, 217.7, 208.7);
+					break;
+					case keycode.J:
+					console.log("Letra J");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					context.fillText("Jokes on you!", x+80, y-50);
+					context.drawImage(imagen2, x, y, 212.7, 228.7);
+					break;
+					case keycode.F:
+					console.log("Letra F");
+					context.clearRect(0, 0, innerWidth, innerHeight);
+					context.fillText("Nice to see you again, or is it?", x-15, y-50);
+					context.drawImage(imagen1, x, y, 150, 125.5);
+					break;
+					default:
+					console.log(event.keyCode);
+					}
+				}
+
+				window.addEventListener('keydown', onKeyboardEvent, false);
+
+			};
+
+		</script>
+
+	</head>
+	<body>
+		
+		<div class="PB">
+				<div class="navigation">
+					<div class="golden-hour-navigation">
+							<div class="navigation2">
+								<div class="portfolio-wordmark">
+										<a href="index.html" class="image-link">
+											<img src="meux_Logo.png" alt="meux logo" width="164.4" height="19.288">
+										</a>	
+										
+										<div class="graphic-digital">UX/UI + DIGITAL DESIGN</div>
+								</div>
+								<div class="navigation-links">
+										<a href="Interface/projectsUnit1.html" class="work">Projects</a>
+										<div class="about">About Me</div>
+										<div class="about2">CV</div>
+										<div class="contact-link">
+											<div class="lets-talk">Let’s talk  ↗</div>
+										</div>
+								</div>
+							</div>
+					</div>
+				</div>
+		
+				<div class="project-introduction">
+					<div class="project-trail">
+							<a href="Interface/projectsUnit1.html" class="back-link">← Back</a>
+							<div class="course-trail">DYNAMIC ANIMATION     /     UNIT 01     /     PJ01 - Interactivo Con El Teclado</div>
+				</div>
+				<div class="actContent">
+					<p>Press arrow keys. Or keys A, S, D, F, J or Space</p>
+					<canvas id="canvas" width="650" height="450"></canvas>
+				</div>
+				<div class="footer">
+					<div class="golden-hour-footer">
+							<div class="footer2">
+								<img src="meux_Logo.png" alt="meux logo" width="164.4" height="19.288">
+								
+								<div class="made-with-intention">Made by ME, to the world. For us, for humans.</div>
+								<div class="social-links">
+										<div class="instagram">Instagram ↗</div>
+										<div class="behance">LinkedIn ↗</div>
+										<div class="back-to-top">Back to top ↑</div>
+								</div>
+							</div>
+					</div>
+				</div>
+		</div>
+		
+	</body>
+
+</html>
