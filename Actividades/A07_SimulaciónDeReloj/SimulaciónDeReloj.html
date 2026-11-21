@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <div class="columna" id="columnaIzq"></div>
+    <div class="columna" id="columnaDer"></div>
+    <header>MonicaEnriquez_AD | 34574 | IDGD V</header>
+    <h1>Old Clock in my Room</h1>
+    <link rel="stylesheet" href="styleReloj.css">
+    <style>
+        canvas { 
+            background-image: url("cara.png");
+            background-repeat: no-repeat;
+        }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <button onclick="window.location.href='file:///C:/Users/lmoni/IDGD%20V/Animación%20Dinámica/GitHub_MonicaEnriquez_AD.github.io/index.html'">Regresar a INDEX</a>
+    <script src="utilsReloj.js"></script>
+    <script>
+    window.onload = function () {
+      var canvas = document.getElementById('canvas'),
+          context = canvas.getContext('2d'),
+          //arrow = new Arrow(),
+          vr = .1; //degrees
+          var hora = new Image();
+          hora.src = "hora.png";
+          var min = new Image();
+          min.src = "min.png";
+          var seg = new Image();
+          seg.src = "seg.png";
+          var radianesH=0;
+          var radianesM=0;
+          var radianesS=0;
+
+          var centro = new Image();
+          centro.src = "centro.png";
+
+      (function drawImage () {
+        window.requestAnimationFrame(drawImage, canvas);
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.save();
+        context.translate(250, 250);
+
+        radianesH += (vr * Math.PI / 480); //to radians
+        context.rotate(radianesH); //radians
+        context.drawImage(hora, -hora.width/2,-hora.height/2);
+
+        radianesM += (vr * Math.PI / 48); //to radians
+        context.rotate(radianesM); //radians
+        context.drawImage(min, -min.width/2,-min.height/2);
+
+        radianesS += (vr * Math.PI / 4.8); //to radians
+        context.rotate(radianesS); //radians
+        context.drawImage(seg, -seg.width/2,-seg.height/2);
+
+        context.drawImage(centro, -centro.width/2,-centro.height/2);
+
+        context.restore();
+      }());
+      
+    };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,284 @@
+.PB {
+  	width: 100%;
+  	height: relative;
+  	position: relative;
+  	background-color: #ffd45c;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	text-align: left;
+  	font-size: 10px;
+  	color: #49351b;
+  	font-family: Inter;
+}
+.navigation {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+}
+.golden-hour-navigation {
+  	width: 1440px;
+  	height: 104px;
+  	position: relative;
+}
+.navigation2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #ffd45c;
+  	border-bottom: 1px solid rgba(73, 53, 27, 0.38);
+  	box-sizing: border-box;
+  	width: 1440px;
+  	height: 104px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 0px 64px;
+  	gap: 20px;
+}
+.portfolio-wordmark {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	gap: 20px;
+}
+.meux_Logo {
+  	position: relative;
+	max-width: 100%;
+  	box-shadow: -2.054999828338623px 1.5412499904632568px 2.49px rgba(73, 53, 27, 0.5);
+  	flex-shrink: 0;
+}
+.graphic-digital {
+  	width: 160px;
+  	position: relative;
+  	letter-spacing: 0.1em;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.navigation-links {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	gap: 40px;
+  	font-size: 16px;
+}
+.work {
+	text-decoration: none;
+	color: #49351B;
+	border-radius: 32px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	width: 65px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.about {
+  	width: 76px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.about2 {
+  	width: 25px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.contact-link {
+  	border-radius: 50px;
+  	background: linear-gradient(89.93deg, #241808, #49351b);
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	padding: 15px 24px;
+  	color: #ffd45c;
+}
+.lets-talk {
+  	width: 91px;
+  	position: relative;
+  	white-space: pre-wrap;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.project-introduction {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	padding: 34px 64px 26px;
+  	font-size: 14px;
+}
+.project-trail {
+  	width: 1312px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	gap: 20px;
+}
+.back-link {
+	text-decoration: none;
+	color: #49351b;
+  	width: 95px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.course-trail {
+  	width: 390px;
+  	position: relative;
+  	font-size: 12px;
+  	white-space: pre-wrap;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.actImg {
+  	align-self: stretch;
+  	height: 450px;
+  	background-color: #c1d96a;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: grid;
+  	box-sizing: border-box;
+  	grid-template-columns: 1fr;
+  	grid-template-rows: 1fr;
+  	gap: 40px;
+  	padding-left: 67px;
+  	padding-right: 67px;
+  	padding-top: 15px;
+  	padding-bottom: 20px;
+}
+.PelucheFormato {
+	position: center;
+	padding-left: 25%;
+}
+.footer {
+  	align-self: stretch;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	text-align: center;
+}
+.golden-hour-footer {
+  	width: 1440px;
+  	height: 72px;
+  	position: relative;
+}
+.footer2 {
+  	position: absolute;
+  	top: 0px;
+  	left: 0px;
+  	background-color: #ffd45c;
+  	width: 1440px;
+  	height: 72px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 32px 64px;
+  	box-sizing: border-box;
+  	gap: 20px;
+}
+.meux-logo-icon2 {
+  	height: 19.3px;
+  	width: 164.4px;
+  	position: relative;
+  	box-shadow: -2.054999828338623px 1.5412499904632568px 2.49px rgba(73, 53, 27, 0.5);
+  	flex-shrink: 0;
+}
+.made-with-intention {
+  	width: 430px;
+  	position: relative;
+  	letter-spacing: 0.06em;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.social-links {
+  	overflow: hidden;
+  	display: flex;
+  	align-items: flex-start;
+  	gap: 28px;
+  	flex-shrink: 0;
+  	text-align: left;
+  	font-size: 14px;
+}
+.instagram {
+  	width: 84px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.behance {
+  	width: 75px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+.back-to-top {
+  	width: 93px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+
+body {
+  	margin: 0;
+  	line-height: normal;
+}
+
+.actContent{
+	text-align: center;
+	width: relative;
+	height: relative;
+	background-color: #C1D96A;
+	margin-top: 24px;
+	margin-bottom: 20px;
+    margin-left: 165px;
+}
+canvas{
+	border: 3px solid brown;
+	background-color: white;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+header{
+	color:rgb(153, 0, 0);
+	text-align: center;
+	font-family: "Asap", sans-serif;
+	font-style: Light 500 Italic;
+	font-size: 200x;
+	padding-top: 1%;
+}
+h1 {
+	background-color:rgb(153, 0, 0);
+	color:rgb(255, 255, 255);
+	text-align: center;
+	font-family: "Asap", sans-serif;
+	font-style: Medium 500;
+	font-size: 200x;
+	padding-bottom: 1%;
+	padding-top: 1%;
+}
+
+.work {
+	text-decoration: none;
+	color: #49351B;
+	border-radius: 32px;
+  	overflow: hidden;
+  	display: flex;
+  	align-items: center;
+  	width: 65px;
+  	position: relative;
+  	display: inline-block;
+  	flex-shrink: 0;
+}
+
